@@ -7,7 +7,8 @@ import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import { useAuthStore } from '@/store/auth.store';
 import { motion } from 'framer-motion';
-import { Star, Map, Wind, Droplets, Flame, Mountain, Sparkles } from 'lucide-react';
+import { Star, Map, Wind, Droplets, Flame, Mountain, Sparkles, Heart, Hash, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const elementIcons: any = {
     'Kim': <Star className="h-4 w-4 text-gray-400" />,
@@ -16,6 +17,11 @@ const elementIcons: any = {
     'Hỏa': <Flame className="h-4 w-4 text-red-500" />,
     'Thổ': <Mountain className="h-4 w-4 text-amber-700" />,
 };
+
+const ASTROLOGY_FEATURES = [
+    { href: '/astrology/compatibility', icon: Heart, title: 'Xem Độ Hợp Đôi', desc: 'Tuổi hợp, mệnh hợp, tình duyên' },
+    { href: '/astrology/numerology', icon: Hash, title: 'Số Học Cá Nhân', desc: 'Số đường đời, năm cá nhân' },
+];
 
 export default function AstrologyPage() {
     const { user, setAuth } = useAuthStore();
@@ -51,11 +57,29 @@ export default function AstrologyPage() {
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-12">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
                 <h1 className="text-4xl md:text-6xl font-mystic font-bold mb-4">Lá Số Của Bạn</h1>
                 <p className="text-foreground/60 max-w-xl mx-auto">
                     Giải mã vận mệnh qua Thiên Can, Địa Chi và Ngũ Hành bản mệnh.
                 </p>
+            </div>
+
+            {/* Quick Links to Features */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 max-w-2xl mx-auto">
+                {ASTROLOGY_FEATURES.map((feature) => (
+                    <Link key={feature.href} href={feature.href}>
+                        <Card className="flex items-center gap-4 p-4 hover:bg-mystic-purple/20 transition-colors group cursor-pointer">
+                            <div className="w-12 h-12 rounded-full bg-mystic-gold/10 flex items-center justify-center text-mystic-gold group-hover:bg-mystic-gold group-hover:text-mystic-dark transition-colors">
+                                <feature.icon className="h-6 w-6" />
+                            </div>
+                            <div className="flex-grow">
+                                <h4 className="font-mystic font-bold text-mystic-gold">{feature.title}</h4>
+                                <p className="text-xs text-foreground/50">{feature.desc}</p>
+                            </div>
+                            <ArrowRight className="h-4 w-4 text-foreground/30 group-hover:text-mystic-gold transition-colors" />
+                        </Card>
+                    </Link>
+                ))}
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

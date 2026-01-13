@@ -2,6 +2,9 @@ import { Injectable, UnauthorizedException, BadRequestException } from '@nestjs/
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 import * as bcrypt from 'bcryptjs';
+// @ts-ignore
+import { Solar, Lunar, I18n } from 'lunar-javascript';
+import { LunarVN } from '../calendar/lunar-vn';
 import { UserService } from '../user/user.service';
 import { RegisterDto, LoginDto } from './dto/auth.dto';
 
@@ -11,7 +14,10 @@ export class AuthService {
         private userService: UserService,
         private jwtService: JwtService,
         private configService: ConfigService,
-    ) { }
+    ) {
+        I18n.setMessages('vn', LunarVN);
+        I18n.setLanguage('vn');
+    }
 
     async register(registerDto: RegisterDto) {
         const userExists = await this.userService.findByEmail(registerDto.email);
@@ -20,9 +26,41 @@ export class AuthService {
         }
 
         const hashedPassword = await bcrypt.hash(registerDto.password, 10);
+
+        // Calculate astrological fields
+        const birthDate = new Date(registerDto.birthDate);
+        // Assuming birthTime is in 'HH:MM' format, e.g., '14:30'
+        // Note: lunar-javascript's Solar.fromDate doesn't directly use time for zodiacs,
+        // but it's good practice to parse it if needed for other calculations.
+        // For now, we'll just use the date.
+        // const [hour, minute] = registerDto.birthTime.split(':').map(Number);
+        const solar = Solar.fromDate(birthDate);
+        const lunar = solar.getLunar();
+
+        // Western Zodiac Translation
+        const westernZodiacMap: Record<string, string> = {
+            'Aries': 'Bạch Dương', 'Taurus': 'Kim Ngưu', 'Gemini': 'Song Tử', 'Cancer': 'Cự Giải',
+            'Leo': 'Sư Tử', 'Virgo': 'Xử Nữ', 'Libra': 'Thiên Bình', 'Scorpio': 'Bọ Cạp',
+            'Sagittarius': 'Nhân Mã', 'Capricorn': 'Ma Kết', 'Aquarius': 'Bảo Bình', 'Pisces': 'Song Ngư'
+        };
+
+        const rawZodiac = (solar as any).getXingZuo();
+        const zodiacSign = westernZodiacMap[rawZodiac] || rawZodiac;
+        const chineseZodiac = (lunar as any).getYearShengXiao();
+        const element = (lunar as any).getYearNaYin(); // NaYin is often referred to as element in Chinese astrology
+        const heavenlyStem = lunar.getYearGan();
+        const earthlyBranch = lunar.getYearZhi();
+
         const user = await this.userService.create({
             ...registerDto,
             password: hashedPassword,
+            birthDate,
+            zodiacSign,
+            chineseZodiac,
+            element,
+            heavenlyStem,
+            earthlyBranch,
+            role: 'user',
         });
 
         const tokens = await this.getTokens(user._id.toString(), user.email);

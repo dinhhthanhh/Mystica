@@ -12,6 +12,22 @@ export class RegisterDto {
     @IsString()
     @IsNotEmpty({ message: 'Tên không được để trống' })
     name: string;
+
+    @IsString()
+    @IsNotEmpty({ message: 'Ngày sinh không được để trống' })
+    birthDate: string;
+
+    @IsString()
+    @IsNotEmpty({ message: 'Giờ sinh không được để trống' })
+    birthTime: string;
+
+    @IsString()
+    @IsNotEmpty({ message: 'Nơi sinh không được để trống' })
+    birthPlace: string;
+
+    @IsString()
+    @IsNotEmpty({ message: 'Giới tính không được để trống' })
+    gender: string;
 }
 
 export class LoginDto {

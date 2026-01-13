@@ -12,4 +12,4 @@ console.log('Earthly Branch:', lunar.getDayZhi());
 console.log('Zodiac:', lunar.getYearShengXiao());
 console.log('Should Do (Yi):', lunar.getDayYi());
 console.log('Should Not Do (Ji):', lunar.getDayJi());
-console.log('Auspicious Hours:', lunar.getDayTimes().filter(t => t.getTianShenType() === '吉').map(t => `${t.getZhi()} (${t.getTianShen()})`));
+console.log('Auspicious Hours:', lunar.getTimes().filter(t => t.getTianShenType() === '黄道').map(t => `${t.getZhi()} (${t.getTianShen()})`));

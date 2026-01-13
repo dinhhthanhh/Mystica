@@ -212,34 +212,99 @@ export const YiJi = {
     'yj.guiXiu': 'Quy tu',
 };
 
+export const ZhiXing = {
+    '建': 'Kiến', '除': 'Trừ', '满': 'Mãn', '平': 'Bình', '定': 'Định', '执': 'Chấp',
+    '破': 'Phá', '危': 'Nguy', '成': 'Thành', '收': 'Thu', '开': 'Khai', '闭': 'Bế'
+};
+
+export const Xiu = {
+    '角': 'Giác', '亢': 'Cang', '氐': 'Đê', '房': 'Phòng', '心': 'Tâm', '尾': 'Vĩ', '箕': 'Cơ',
+    '斗': 'Đẩu', 'Ngưu': 'Ngưu', '女': 'Nữ', '虚': 'Hư', 'Nguy': 'Nguy', '室': 'Thất', '壁': 'Bích',
+    '奎': 'Khuê', '娄': 'Lâu', '胃': 'Vị', '昴': 'Mão', '毕': 'Tất', '觜': 'Chủy', '参': 'Sâm',
+    '井': 'Tỉnh', '鬼': 'Quỷ', '柳': 'Liễu', '星': 'Tinh', '张': 'Trương', '翼': 'Dực', '轸': 'Chẩn'
+};
+
+export const NaYin = {
+    '海中金': 'Hải Trung Kim', '炉中火': 'Lư Trung Hỏa', '大林木': 'Đại Lâm Mộc', '路旁土': 'Lộ Bàng Thổ',
+    '剑锋金': 'Kiếm Phong Kim', '山头火': 'Sơn Đầu Hỏa', '涧下水': 'Giản Hạ Thủy', '城头土': 'Thành Đầu Thổ',
+    '白蜡金': 'Bạch Lạp Kim', '杨柳木': 'Dương Liễu Mộc', '泉中水': 'Tuyền Trung Thủy', '屋上土': 'Ốc Thượng Thổ',
+    '霹雳火': 'Pích Lịch Hỏa', '松柏木': 'Tùng Bách Mộc', '长流水': 'Trường Lưu Thủy', '沙中金': 'Sa Trung Kim',
+    '山下火': 'Sơn Hạ Hỏa', '大驿土': 'Đại Trạch Thổ', '金箔金': 'Kim Bạch Kim', '佛灯火': 'Phúc Đăng Hỏa',
+    '天河水': 'Thiên Hà Thủy', '驿上土': 'Sa Trung Thổ', '钗钏金': 'Thoa Xuyến Kim', '桑柘木': 'Tang Đố Mộc',
+    '大溪水': 'Đại Khê Thủy', '沙中土': 'Sa Trung Thổ', '天上火': 'Thiên Thượng Hỏa', '石榴木': 'Thạch Lựu Mộc',
+    '大海水': 'Đại Hải Thủy', '大海土': 'Đại Hải Thổ',
+};
+
+export const LiuYao = {
+    '大安': 'Đại An (Tốt đầu)', '留连': 'Lưu Liên (Chậm trễ)', '速喜': 'Tốc Hỷ (Tin mừng)',
+    '赤口': 'Xích Khẩu (Cãi vã)', '小吉': 'Tiểu Cát (Cát lành)', '空亡': 'Không Vong (Rủi ro)'
+};
+
+export const LiThuanPhong = {
+    'DAI_AN': 'Đại An: Mọi việc tốt lành, cầu tài đi hướng Tây Nam, nhà cửa yên lành. Người xuất hành được bình yên.',
+    'LUU_NIEN': 'Lưu Niên: Mọi việc khó thành, cầu tài mờ mịt. Kiện cáo nên hoãn lại. Người đi chưa có tin về. Mất của đi hướng Nam mới tìm thấy.',
+    'TOC_HY': 'Tốc Hỷ: Tin vui sắp tới, cầu tài đi hướng Nam. Đi gặp gỡ các quan gặp nhiều may mắn. Chăn nuôi thuận lợi.',
+    'XICH_KHAU': 'Xích Khẩu: Hay có chuyện cãi vã, gây rối cho nhau. Khuyên nên hoãn việc lại, tránh việc cãi cọ.',
+    'TIEU_CAT': 'Tểu Cát: Rất tốt lành, đi thường gặp may mắn. Buôn bán có lời. Người đi sắp về nhà. Có bệnh cầu sẽ khỏi.',
+    'KHONG_VONG': 'Không Vong: Mọi việc không thành, cầu tài không được. Hay bị rủi ro, đi xa nên cẩn thận.'
+};
+
 export const LunarVN = {
     ...SolarTerms,
     ...HeavenlyStems,
     ...EarthlyBranches,
     ...Zodiac,
     ...YiJi,
-    'di.wang': 'Đế Vượng',
-    'di.shuai': 'Suy',
-    'di.bing': 'Bệnh',
-    'di.si': 'Tử',
-    'di.mu': 'Mộ',
-    'di.jue': 'Tuyệt',
-    'di.tai': 'Thai',
-    'di.yang': 'Dưỡng',
-    'di.changSheng': 'Trường Sinh',
-    'di.muYu': 'Mộc Dục',
-    'di.guanDai': 'Quan Đới',
-    'di.linGuan': 'Lâm Quan',
-    'ts.qingLong': 'Thanh Long',
-    'ts.mingTang': 'Minh Đường',
-    'ts.tianXing': 'Thiên Hình',
-    'ts.zhuQue': 'Chu Tước',
-    'ts.jinGui': 'Kim Quỹ',
-    'ts.tianDe': 'Thiên Đức',
-    'ts.baiHu': 'Bạch Hổ',
-    'ts.yuTang': 'Ngọc Đường',
-    'ts.tianLao': 'Thiên Lao',
-    'ts.xuanWu': 'Huyền Vũ',
-    'ts.siMing': 'Tư Mệnh',
-    'ts.gouChen': 'Câu Trần',
+    ...ZhiXing,
+    ...Xiu,
+    ...NaYin,
+    ...LiuYao,
+    ...LiThuanPhong,
+    '帝旺': 'Đế Vượng', '衰': 'Suy', '病': 'Bệnh', '死': 'Tử', '墓': 'Mộ', '绝': 'Tuyệt', '胎': 'Thai', '养': 'Dưỡng',
+    '长生': 'Trường Sinh', '沐浴': 'Mộc Dục', '冠带': 'Quan Đới', '临官': 'Lâm Quan',
+    '青龙': 'Thanh Long', '明堂': 'Minh Đường', '天刑': 'Thiên Hình', '朱雀': 'Chu Tước', '金匮': 'Kim Quỹ',
+    '天德': 'Thiên Đức', '白虎': 'Bạch Hổ', '玉堂': 'Ngọc Đường', '天牢': 'Thiên Lao', '玄武': 'Huyền Vũ',
+    '司命': 'Tư Mệnh', '勾陈': 'Câu Trần',
+    '正南': 'Chính Nam', '东南': 'Đông Nam', '西南': 'Tây Nam', '正西': 'Chính Tây', '西北': 'Tây Bắc',
+    '正北': 'Chính Bắc', '东北': 'Đông Bắc', '正东': 'Chính Đông',
+    '开市': 'Khai trương', '交易': 'Giao dịch', '立券': 'Lập khế ước', '纳财': 'Nạp tài', '纳畜': 'Nạp gia súc',
+    '造畜稠': 'Xây chuồng trại', '入宅': 'Nhập trạch', '移徙': 'Dời chỗ ở', '安床': 'An sàng', '开光': 'Khai quang',
+    '祈福': 'Cầu phúc', '求嗣': 'Cầu con', '动土': 'Động thổ', '嫁娶': 'Cưới hỏi', '栽种': 'Trồng trọt',
+    '安葬': 'An táng', '理发': 'Cắt tóc', '造庙': 'Xây miếu', '作灶': 'Làm bếp', '入殓': 'Nhập liệm',
+    '行丧': 'Đám ma', '造桥': 'Xây cầu', '纳采': 'Nạp thái', '除服': 'Xả tang', '成服': 'Thành phục',
+    '移柩': 'Di cữu', '破土': 'Phá thổ', '修坟': 'Sửa phần mộ', '立碑': 'Lập bia',
+    '阴德': 'Âm đức', '王日': 'Vương nhật', '驿马': 'Dịch mã', '天后': 'Thiên hậu', '时阴': 'Thời âm',
+    '生气': 'Sinh khí', '益后': 'Ích hậu', '月厌': 'Nguyệt yếm', '地火': 'Địa hỏa',
+    '重日': 'Trình nhật',
+    '无': 'Không có', '诸事不宜': 'Mọi việc không nên làm', '吉': 'Cát (Tốt)', '凶': 'Hung (Xấu)',
+    '黄道': 'Hoàng Đạo (Cát)', '黑道': 'Hắc Đạo (Hung)',
+    // Months
+    '正': 'Giêng', '二': 'Hai', '三': 'Ba', '四': 'Tư', '五': 'Năm', '六': 'Sáu',
+    '七': 'Bảy', '八': 'Tám', '九': 'Chín', '十': 'Mười', '冬': 'Một (Chạp)', '腊': 'Chạp',
+    // Days
+    '初一': 'Mùng 1', '初二': 'Mùng 2', '初三': 'Mùng 3', '初四': 'Mùng 4', '初五': 'Mùng 5',
+    '初六': 'Mùng 6', '初七': 'Mùng 7', '初八': 'Mùng 8', '初九': 'Mùng 9', '初十': 'Mùng 10',
+    '十一': '11', '十二': '12', '十三': '13', '十四': '14', '十五': '15',
+    '十六': '16', '十七': '17', '十八': '18', '十九': '19', '二十': '20',
+    '廿一': '21', '廿二': '22', '廿三': '23', '廿四': '24', '廿五': '25',
+    '廿六': '26', '廿七': '27', '廿八': '28', '廿九': '29', '三十': '30',
+    // Animals
+    '鼠': 'Chuột', '牛': 'Trâu', '虎': 'Hổ', '兔': 'Mèo', '龙': 'Rồng', '蛇': 'Rắn',
+    '马': 'Ngựa', '羊': 'Dê', '猴': 'Khỉ', '鸡': 'Gà', '狗': 'Chó', '猪': 'Lợn',
+    '鼠 year': 'Năm Tý', '牛 year': 'Năm Sửu', '虎 year': 'Năm Dần', '兔 year': 'Năm Mão', '龙 year': 'Năm Thìn', '蛇 year': 'Năm Tỵ',
+    '马 year': 'Năm Ngọ', '羊 year': 'Năm Mùi', '猴 year': 'Năm Thân', '鸡 year': 'Năm Dậu', '狗 year': 'Năm Tuất', '猪 year': 'Năm Hợi',
+    // Liu Yao
+    '留连': 'Lưu Liên', '速喜': 'Tốc Hỷ', '小吉': 'Tiểu Cát', '空亡': 'Không Vong',
+    '先胜': 'Tiên Thắng', '先负': 'Tiên Phụ', '友引': 'Hữu Dẫn', '佛灭': 'Phật Diệt', '大安': 'Đại An', '赤口': 'Xích Khẩu',
+    // Digits
+    '〇': '0', '一': '1',
+    // Wu Hou & Others
+    '鹊始巢': 'Chim thước bắt đầu làm tổ', '有明': 'Trăng sáng (Hữu Minh)',
+    // Peng Zu
+    '丁不剃头头必生疮': 'Canh Đinh không cắt tóc, đầu dễ sinh nhọt',
+    '亥不嫁娶不利新郎': 'Chi Hợi không cưới hỏi, bất lợi cho chú rể',
+    // Peng Zu Suffixes
+    '不剃头头必生疮': ' không cắt tóc, đầu dễ sinh nhọt',
+    '不嫁娶不利新郎': ' không cưới hỏi, bất lợi cho chú rể',
+    'TânTỵ': 'Tân Tỵ',
 };

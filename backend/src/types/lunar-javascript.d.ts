@@ -6,7 +6,10 @@ declare module 'lunar-javascript' {
         getLunar(): Lunar;
         toYmd(): string;
         getWeekInChinese(): string;
+        getWeek(): number;
         getDay(): number;
+        getMonth(): number;
+        getYear(): number;
     }
     export class Lunar {
         getDay(): number;
@@ -24,12 +27,37 @@ declare module 'lunar-javascript' {
         getJieQi(): string;
         getDayYi(): string[];
         getDayJi(): string[];
-        getDayTimes(): any[];
+        getTimes(): any[];
         getYearZodiac(): string;
         getYearNaYin(): string;
+        getMonthNaYin(): string;
+        getDayNaYin(): string;
         getYearInChinese(): string;
         getMonthInChinese(): string;
+        getDayInChinese(): string;
+        getZhiXing(): string;
+        getXiu(): string;
+        getLiuYao(): string;
+        getPengZuGan(): string;
+        getPengZuZhi(): string;
+        getDayPositionXi(): string;
+        getDayPositionXiDesc(): string;
+        getDayPositionFu(): string;
+        getDayPositionFuDesc(): string;
+        getDayPositionCai(): string;
+        getDayPositionCaiDesc(): string;
+        getDayJiShen(): string[];
+        getDayXiongSha(): string[];
+        getDayTianShen(): string;
+        getDayTianShenType(): string;
+        getChongDesc(): string;
+        getWuHou(): string;
+        getYueXiang(): string;
     }
     export class HolidayUtil { }
-    export class Iizuki { }
+    export class I18n {
+        static setMessages(lang: string, messages: any): void;
+        static setLanguage(lang: string): void;
+        static getMessage(key: string): string;
+    }
 }

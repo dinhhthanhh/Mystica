@@ -12,7 +12,8 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix"
+    "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix",
+    "seed:tarot": "npx ts-node --transpile-only scripts/seed-tarot.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
@@ -54,6 +55,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.0",
     "prettier": "^3.1.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
 }

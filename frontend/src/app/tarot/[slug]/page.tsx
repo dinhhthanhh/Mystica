@@ -214,11 +214,15 @@ export default function TarotReadingPage() {
                                 <div key={i} className="text-center space-y-4">
                                     <p className="text-xs font-bold text-mystic-gold uppercase tracking-tighter">{rc.positionMeaning}</p>
                                     <TarotCard
-                                        card={rc.cardId}
+                                        card={rc.cardData}
                                         isFlipped={true}
                                         isReversed={rc.isReversed}
                                         size="md"
                                     />
+                                    <div className="max-w-[160px]">
+                                        <p className="text-sm font-mystic font-bold text-mystic-gold">{rc.cardData?.nameVi}</p>
+                                        <p className="text-xs text-foreground/50">{rc.isReversed ? 'Ngược' : 'Xuôi'}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>

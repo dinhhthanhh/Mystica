@@ -13,7 +13,7 @@ export class AiService {
             throw new Error('GEMINI_API_KEY is not defined in environment variables');
         }
         this.genAI = new GoogleGenerativeAI(apiKey);
-        this.model = this.genAI.getGenerativeModel({ model: 'gemini-pro' });
+        this.model = this.genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
     }
 
     async generateInterpretation(prompt: string): Promise<string> {

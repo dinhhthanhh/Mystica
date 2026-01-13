@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Body, UseGuards, Req, Param } from '@nestjs/common';
+import { Controller, Post, Get, Delete, Body, UseGuards, Req, Param } from '@nestjs/common';
 import { ChatService } from './chat.service';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
@@ -21,5 +21,11 @@ export class ChatController {
     async getOracleHistory(@Req() req: any) {
         const room = await this.chatService.getOracleRoom(req.user.sub);
         return this.chatService.getMessages(room._id.toString());
+    }
+
+    @Delete('oracle/reset')
+    @ApiOperation({ summary: 'Xóa lịch sử chat với AI Oracle' })
+    async resetOracleChat(@Req() req: any) {
+        return this.chatService.resetOracleChat(req.user.sub);
     }
 }

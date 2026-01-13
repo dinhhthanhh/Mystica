@@ -1,0 +1,136 @@
+{
+  "solar": {
+    "date": "2026-01-13",
+    "weekDay": "二"
+  },
+  "lunar": {
+    "dateText": "二〇二五年冬月廿五",
+    "monthInChinese": "冬",
+    "dayInChinese": "廿五",
+    "zhiXing": "开",
+    "xiu": "尾",
+    "naYin": "屋上土",
+    "pengZuGan": "丁不剃头头必生疮",
+    "pengZuZhi": "亥不嫁娶不利新郎",
+    "liuYao": "大安",
+    "positions": {
+      "xi": {
+        "desc": "正南"
+      },
+      "fu": {
+        "desc": "东南"
+      },
+      "cai": {
+        "desc": "西南"
+      }
+    },
+    "yi": [
+      "开市",
+      "交易",
+      "立券",
+      "纳财",
+      "纳畜",
+      "造畜稠",
+      "入宅",
+      "移徙",
+      "安床",
+      "开光",
+      "祈福",
+      "求嗣",
+      "动土"
+    ],
+    "ji": [
+      "嫁娶",
+      "栽种",
+      "安葬",
+      "理发",
+      "造庙",
+      "作灶",
+      "入殓",
+      "行丧",
+      "造桥"
+    ],
+    "jiShen": [
+      "阴德",
+      "王日",
+      "驿马",
+      "天后",
+      "时阴",
+      "生气",
+      "益后",
+      "明堂"
+    ],
+    "xiongSha": [
+      "月厌",
+      "地火",
+      "重日"
+    ],
+    "times": [
+      {
+        "zhi": "子",
+        "tianShen": "白虎",
+        "tianShenType": "黑道"
+      },
+      {
+        "zhi": "丑",
+        "tianShen": "玉堂",
+        "tianShenType": "黄道"
+      },
+      {
+        "zhi": "寅",
+        "tianShen": "天牢",
+        "tianShenType": "黑道"
+      },
+      {
+        "zhi": "卯",
+        "tianShen": "玄武",
+        "tianShenType": "黑道"
+      },
+      {
+        "zhi": "辰",
+        "tianShen": "司命",
+        "tianShenType": "黄道"
+      },
+      {
+        "zhi": "巳",
+        "tianShen": "勾陈",
+        "tianShenType": "黑道"
+      },
+      {
+        "zhi": "午",
+        "tianShen": "青龙",
+        "tianShenType": "黄道"
+      },
+      {
+        "zhi": "未",
+        "tianShen": "明堂",
+        "tianShenType": "黄道"
+      },
+      {
+        "zhi": "申",
+        "tianShen": "天刑",
+        "tianShenType": "黑道"
+      },
+      {
+        "zhi": "酉",
+        "tianShen": "朱雀",
+        "tianShenType": "黑道"
+      },
+      {
+        "zhi": "戌",
+        "tianShen": "金匮",
+        "tianShenType": "黄道"
+      },
+      {
+        "zhi": "亥",
+        "tianShen": "天德",
+        "tianShenType": "黄道"
+      },
+      {
+        "zhi": "子",
+        "tianShen": "金匮",
+        "tianShenType": "黄道"
+      }
+    ]
+  }
+}
